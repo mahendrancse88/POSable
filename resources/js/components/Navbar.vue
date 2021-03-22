@@ -4,7 +4,11 @@
       <router-link :to="{ name: user ? 'home' : 'welcome' }" class="navbar-brand">
         {{ appName }}
       </router-link>
-
+     
+        <router-link :to="{ name: 'developers.all' }"  v-if="user" class="nav-link">
+          {{ $t('Developer Lists') }}
+        </router-link>
+     
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false">
         <span class="navbar-toggler-icon" />
       </button>

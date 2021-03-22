@@ -21,7 +21,9 @@
           <div class="form-group row">
             <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
             <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
+              <input v-model="form.email"  required  data-msg-required="Enter your E-mail"
+        data-rule-email="true"
+        data-msg-email="Enter a valid E-mail address" class="form-control" type="email" name="email">
               <has-error :form="form" field="email" />
             </div>
           </div>

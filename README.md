@@ -1,10 +1,10 @@
-# Laravel-Vue SPA 
+# POSable 
 
 <a href="https://github.com/cretueusebiu/laravel-vue-spa/actions"><img src="https://github.com/cretueusebiu/laravel-vue-spa/workflows/tests/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/cretueusebiu/laravel-vue-spa"><img src="https://poser.pugx.org/cretueusebiu/laravel-vue-spa/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/cretueusebiu/laravel-vue-spa"><img src="https://poser.pugx.org/cretueusebiu/laravel-vue-spa/v/stable.svg" alt="Latest Stable Version"></a>
 
-> A Laravel-Vue SPA starter kit.
+> A POSable starter kit.
 
 <p align="center">
 <img src="https://i.imgur.com/NHFTsGt.png">

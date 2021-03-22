@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\OAuthController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\UserController;
+use App\Http\Controllers\DevelopersController;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Settings\PasswordController;
 use App\Http\Controllers\Settings\ProfileController;
@@ -29,6 +30,13 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     Route::patch('settings/profile', [ProfileController::class, 'update']);
     Route::patch('settings/password', [PasswordController::class, 'update']);
+    Route::get('developers', [DevelopersController::class, 'index']);
+    Route::post('developers/add',  [DevelopersController::class, 'add']);
+    Route::get('developers/edit/{id}', [DevelopersController::class, 'edit']);
+    Route::post('developers/update/{id}', [DevelopersController::class, 'update']);
+    Route::delete('developers/delete/{id}',[DevelopersController::class, 'destroy']);
+    Route::post('/developersAll/delete/{id}',[DevelopersController::class, 'deleteAll']);
+
 });
 
 Route::group(['middleware' => 'guest:api'], function () {
@@ -44,3 +52,4 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('oauth/{driver}', [OAuthController::class, 'redirect']);
     Route::get('oauth/{driver}/callback', [OAuthController::class, 'handleCallback'])->name('oauth.callback');
 });
+
